@@ -12,7 +12,7 @@ def atm2hPa(p):
     '''converts a given pressure in atm to hPa'''
     phPa=[]
     for i in xrange(len(p)):
-      patm.append(p[i]/hPa2atmp)
+      phPa.append(p[i]/hPa2atmp)
     return(phPa)
 
 def T2K(T):
