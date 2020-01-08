@@ -7,12 +7,18 @@ def u_10(u,h):
     u10=[]
     K=0.41
     c10=0.0013
-    for i in xrange(len(u)):
-        u10.append(u[i]*(1+c10**(0.5)/K*math.log(10/h,e)))
-    return (u10)
-    print("m/s")
+     if(h<11):
+        for i in xrange(len(u)):
+            u10.append(u[i]*(1+c10**(0.5)/K*math.log(10/h,e)))
+        return (u10)
+    #this function is based on Crusis, J. and Waninkhof, R., Gas transfer velocities measured at low wind speed over a lake, Limnol. Oceanogr., 48(3), 2003, 1010–1017.
+
+    else:
+        print("downscaling wind...")
+        for i in xrange(len(u)):
+            u10.append(u[i]/(1-math.pow(c10,0.5)*K*math.log((10/h),e)))
+        return(u10)
     
-#this function is based on Crusis, J. and Waninkhof, R., Gas transfer velocities measured at low wind speed over a lake, Limnol. Oceanogr., 48(3), 2003, 1010–1017.
 
 def u2kn(ms):
     ukn=[]
