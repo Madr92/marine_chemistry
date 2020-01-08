@@ -39,5 +39,3 @@ def rho(T,Sal,rho0):
     else:
         print("data array length mismatch for T and Sal")
 
-#equations and parameters were taken from: 
-#F. J. Millero and F. Huang, The density of seawater as a function of salinity (5 to 70 g kg −1 ) and temperature (273.15 to 363.15 K),Ocean Sci., 5, 91–100, 2009.
