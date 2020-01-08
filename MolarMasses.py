@@ -11,22 +11,22 @@ def Morg(C,H,O,N,P,S):
 
 def X_C (Morg):
     '''This function calculates the conversion factor to express a mass of C in a compound. E.g. to convert CO2 to CO2-C'''
-    X_C=(Morg[1]*mC/Morg[0])
+    X_C=(Morg[1]*mC/Morg)
     return(X_C)
 
 def X_N (Morg):
     '''This function calculates the conversion factor to express a mass of C in a compound. E.g. to convert CO2 to CO2-C'''
-    X_N=(Morg[4]*mN/Morg[0])
+    X_N=(Morg[4]*mN/Morg)
     return(X_N)
 
 def m2n (m,Morg):
     m2n=[]
     '''converts a given mass of substance in g to the number of moles of that substance'''
-    m2n.append(m/Morg[0])
+    m2n.append(m/Morg)
     return(m2n)
 
 def n2m (n,Morg):
     n2m=[]
     '''converts a given number of moles of a substance to the weight of the substance in g'''
-    n2m.append(n[0] * Morg[0])
+    n2m.append(n[0] * Morg)
     return (n2m)
