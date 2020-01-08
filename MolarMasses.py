@@ -6,7 +6,7 @@ from UniversalConstants import*
 def Morg(C,H,O,N,P,S):
     '''defines molar mass for a compound with given sum formula. E.g. Morg(6,12,6,0,0,0,0) outputs molar mass
     for C6H12O6'''
-    Morg=[mC*C+mH*H+mO*O+mN*N+mP*P+mS*S,C,H,O,N,P,S]
+    Morg=mC*C+mH*H+mO*O+mN*N+mP*P+mS*S
     return(Morg)
 
 def X_C (Morg):
